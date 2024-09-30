@@ -1,0 +1,148 @@
+/* [섹션1] 비주얼 */
+.sc-visual .content-area { display: flex; width: 100%; height: 100%; overflow: hidden; } 
+.sc-visual .content-area img { flex-shrink: 0; transition: transform 10s; } 
+.sc-visual .content-area img,
+.sc-visual .content-area video { object-fit: cover; height: 100%; width: 100%; pointer-events: none; max-width: none; } 
+.sc-visual [data-dir="left"] .content-area { justify-content: flex-start; } 
+.sc-visual [data-dir="left"] .content-area img { width: calc(100% + 300px); } 
+.sc-visual [data-dir="right"] .content-area { justify-content: flex-end; } 
+.sc-visual [data-dir="right"] .content-area img { width: calc(100% + 300px); } 
+.sc-visual [data-dir="bottom"] .content-area { align-items: flex-end; } 
+.sc-visual [data-dir="bottom"] .content-area img { height: calc(100% + 300px); } 
+.sc-visual [data-dir="top"] .content-area { align-items: flex-start; } 
+.sc-visual [data-dir="top"] .content-area img { height: calc(100% + 300px); } 
+.sc-visual .swiper-slide-active[data-dir="left"] .content-area img { transform: translateX(-300px); } 
+.sc-visual .swiper-slide-active[data-dir="right"] .content-area img { transform: translateX(300px); } 
+.sc-visual .swiper-slide-active[data-dir="bottom"] .content-area img { transform: translateY(300px); } 
+.sc-visual .swiper-slide-active[data-dir="top"] .content-area img { transform: translateY(-300px); } 
+.sc-visual .swiper { height: calc(100vh - 95px); } 
+.sc-visual .swiper-slide { display: flex; } 
+.sc-visual .swiper-slide a { width: 100%; } 
+.sc-visual .swiper .pagination { display: flex; justify-content: center; position: absolute; z-index: 3; bottom: 40px; gap: 11px; width: 100%; } 
+.sc-visual .swiper .pagination .swiper-pagination-bullet { width: 8px; height: 8x; background: #fff; margin: 0; } 
+.sc-visual .swiper .pagination .swiper-pagination-bullet-active { background: #fff; width: 20px; border-radius: 5px; } 
+.sc-visual .txt-area { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff;; text-align: center; } 
+.sc-visual .txt-area em { font-size: 22px; margin-bottom: 30px; font-weight: 500; display: block; } 
+.sc-visual .txt-area h3 { font-size: 60px; margin-bottom: 30px; white-space: nowrap; font-family: 'HANNA', sans-serif; line-height: 1.4; font-weight: 100; } 
+.sc-visual .txt-area .wrap { display: flex; justify-content: center; } 
+.sc-visual .wrap .char { opacity: 0; } 
+.sc-visual .swiper-slide-active .wrap .char { animation: fade 0.2s forwards; } 
+.sc-visual .wrap .char:nth-child(1) { animation-delay: calc(0.2s*1); } 
+.sc-visual .wrap .char:nth-child(2) { animation-delay: calc(0.2s*2); } 
+.sc-visual .wrap .char:nth-child(3) { animation-delay: calc(0.2s*3); } 
+.sc-visual .wrap .char:nth-child(4) { animation-delay: calc(0.2s*4); } 
+.sc-visual .wrap .char:nth-child(5) { animation-delay: calc(0.2s*5); } 
+.sc-visual .wrap .char:nth-child(6) { animation-delay: calc(0.2s*6); } 
+.sc-visual .wrap .char:nth-child(7) { animation-delay: calc(0.2s*7); } 
+.sc-visual .wrap .char:nth-child(8) { animation-delay: calc(0.2s*8); } 
+.sc-visual .wrap .char:nth-child(9) { animation-delay: calc(0.2s*9); } 
+@keyframes fade { 
+ 0% { opacity: 0; } 100% { opacity: 1; } 
+ }
+.sc-visual .txt-box .link { font-size: 18px; font-weight: 600; } 
+
+
+/* [섹션2] 일하는이야기 */
+.sc-work { overflow: hidden; padding-top: 160px; } 
+.sc-work .head-area { text-align: center; padding: 0 24px; margin-bottom: 60px; } 
+.sc-work .head-area h2 > br { display: none; } 
+.sc-work .swiper { display: flex; flex-wrap: wrap; } 
+.sc-work .swiper:hover { animation-play-state: paused; } 
+.sc-work .swiper-wrapper { transition-timing-function: linear; } 
+.sc-work .swiper-wrapper li { position: relative; display: block; height: 245px; width: 180px; } 
+.sc-work .swiper-wrapper li.odd { margin-top: 40px; } 
+.sc-work .swiper-wrapper > li > a { display: block; position: relative; overflow: hidden; border-radius: 10px; } 
+.sc-work .swiper-wrapper > li > a::after { display: block; content: ''; background: linear-gradient(180deg,transparent 50%,rgba(0,0,0,.5)); pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; } 
+.sc-work .swiper-wrapper > li > a > img { position: relative; transition: 0.3s; height: 245px; width: 180px; object-fit: cover; } 
+.sc-work .swiper-wrapper > li > a > img:hover { transform: scale(1.1); } 
+.sc-work .swiper-wrapper > li > a > p { position: absolute; bottom: 0; color: #fff; font-size: 16px; font-weight: 600; line-height: 1.625; z-index: 1; padding: 10px; white-space: pre-line; text-overflow: ellipsis; overflow: hidden; } 
+@keyframes story { 
+ 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } 
+ }
+
+
+ /* [섹션3] 비전 */
+.sc-vision { padding-top: 160px; } 
+.sc-vision .head-area { text-align: center; margin-bottom: 80px; } 
+.sc-vision .head-area p > br { display: none; } 
+.sc-vision .head-area .headline-sm.m { display: none; } 
+.sc-vision .video-area { position: relative; width: 780px; margin: 0 auto; } 
+.sc-vision .video-area video { object-fit: cover; } 
+.sc-vision .video-area .control-box { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 80px; opacity: 0; } 
+.sc-vision .video-area .control-box:hover { opacity: 1; } 
+.sc-vision .video-area .control-box .btn-play,
+.sc-vision .video-area .control-box .btn-pause { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; display: none; } 
+.sc-vision .video-area .control-box .btn-play.on,
+.sc-vision .video-area .control-box .btn-pause.on { display: block; } 
+.sc-vision .foot-area { text-align: center; } 
+.sc-vision .foot-area h3 { margin-top: 80px; } 
+
+
+/* [섹션4] 그린 */
+.sc-green { margin-top: 160px; position: relative; } 
+.sc-green .bg { display: block; background-image: url('../img/bg_green.jpg'); height: 680px; background-position: 50% 50%; background-size: cover; padding: 100px; background-attachment: fixed; } 
+.sc-green .txt-area { position: absolute; top:50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: #fff; } 
+.sc-green .txt-area svg { margin: 20px auto; } 
+.sc-green .txt-area .title { font-size: 36px; font-weight: 600; line-height: 1.5; white-space: nowrap; } 
+.sc-green .txt-area img { margin: 0 auto; width: 110px; height: 149px; } 
+.sc-green .txt-area .desc { padding: 20px 0; font-size: 16px; font-weight: 400; line-height: 1.75; } 
+
+
+/* [섹션5] 새소식 */
+.sc-news { padding: 120px 0; } 
+.sc-news .headline-sm { text-align: center; word-break: keep-all; margin-bottom: 20px; } 
+.sc-news .content ul { max-width: 820px; margin: 0 auto; } 
+.sc-news .content ul li { border-bottom: 1px solid #f3f4f5; } 
+.sc-news .content ul li a { display: flex; align-items: flex-start; flex-wrap: wrap; padding: 40px 20px; } 
+.sc-news .content .img-area { width: 200px; height: 160px; overflow: hidden; margin-right: 40px; position: relative; } 
+.sc-news .content .img-area::after { content: ""; pointer-events: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid rgba(0, 0, 0, .1); } 
+.sc-news .content .img-area img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease-in-out, .5s ease-in-out}
+.sc-news .content ul li:hover { background: #f3f4f5; } 
+.sc-news .content ul li:hover .img-area img { transform: scale(1.1); } 
+.sc-news .content .txt-area { flex: 1; overflow: hidden; } 
+.sc-news .content .txt-area .tit { max-height: 64px; margin-bottom: 10px; font-size: 20px; line-height: 1.6; font-weight: 600; display: block; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; } 
+.sc-news .content .txt-area .desc { max-height: 52px; margin-bottom: 10px; line-height: 1.625; } 
+.sc-news .content .txt-area time { color: #a6a7a9; font-size: 14px; font-weight: 400; line-height: 1.7142857143; } 
+.sc-news .btn-more { display: block; text-align: center; border-radius: 8px; height: 52px; width: 92px; text-align: center; line-height: 52px; font-weight: 700; position: absolute; left: 50%; transform: translateX(-50%); background-color: #f3f4f5; margin-top: 40px; } 
+
+
+/* [섹션6] 폰트 */
+.sc-fonts { margin-top: 120px; padding: 120px 0 136px; background: #232324; overflow: hidden; } 
+.sc-fonts .head-area { color: #fff; margin-bottom: 60px; text-align: center; } 
+.sc-fonts .head-area h2 > br { display: none; } 
+.sc-fonts .font-area { display: flex; margin-bottom: 60px; } 
+.sc-fonts .font-list { display: flex; justify-content: center; flex-wrap: nowrap; animation: marquee 30s linear infinite; } 
+@keyframes marquee { 
+ 0% { transform: translateX(0); } 100% { transform: translateX(-100%); } 
+ }
+.sc-fonts .font-list li { position: relative; display: block; width: 160px; height: 128px; padding: 16px; border-radius: 8px; background: #37373a; margin-left: 16px; } 
+.sc-fonts .font-list li .font { text-align: left; color: #6c6d6f; font-size: 16px; font-weight: 600; } 
+.sc-fonts .font-list li svg { position: absolute; bottom: 20px; right: 20px; } 
+.sc-fonts .btn-more { margin: 0 auto; display: block; border-radius: 8px; color: #fff; border: 1px solid #fff; background-color: rgba(0,0,0,.3); height: 52px; width: 92px; line-height: 52px; font-weight: 600; } 
+
+
+/* [반응형] */
+.enter { display: none; } 
+
+@media (max-width:980px){
+ .sc-vision .video-area { width: 100%; } 
+ }
+
+@media (max-width:750px){
+ .sc-work .head-area h2 > br { display: block; } 
+ .sc-vision .head-area .headline-sm { display: none; } 
+ .sc-vision .head-area .headline-sm.m { display: block; } 
+ .sc-vision .head-area p > br { display: block; } 
+ .sc-news .content .img-area { width: 100px; height: 80px; margin-right: 16px; } 
+ .sc-news .content .txt-area .tit { max-height: 52px; margin-bottom: 5px; font-size: 16px; line-height: 1.625; } 
+ .sc-news .content .txt-area .desc { max-height: 52px; margin-bottom: 10px; line-height: 1.625; } 
+ .sc-news .content .txt-area time { margin-bottom: 8px; } 
+ .sc-fonts .head-area h2 > br { display: block; } 
+ }
+
+@media (max-width:480px){
+ .enter { display: block; } 
+ .sc-news .news-list .item .img-area { width: 100px; height: 80px; margin-right: 16px; } 
+ .sc-visual .txt-area em { font-size: 15px; margin-bottom: 30px; font-weight: 500; display: block; } 
+ .sc-visual .txt-area h3 { font-size: 40px; margin-bottom: 30px; white-space: nowrap; font-family: 'HANNA', sans-serif; line-height: 1.4; font-weight: 100; } 
+}

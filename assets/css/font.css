@@ -1,0 +1,23 @@
+@font-face {
+  font-family:'NotoSans';
+  font-weight: 400;
+  src: url('../font/NotoSansKR-Regular.ttf');
+}
+
+@font-face {
+  font-family:'NotoSans';
+  font-weight: 500;
+  src: url('../font/NotoSansKR-Medium.ttf');
+}
+
+@font-face {
+  font-family:'NotoSans';
+  font-weight: 700;
+  src: url('../font/NotoSansKR-Bold.ttf');
+}
+
+@font-face {
+  font-family:'HANNA';
+  src: url('../font/BMHANNA.ttf');
+}
+
